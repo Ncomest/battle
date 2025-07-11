@@ -1,4 +1,6 @@
-<script></script>
+<script>
+import { RouterLink } from "vue-router";
+</script>
 <template>
   <section>
     <ul>
@@ -7,7 +9,7 @@
       <li>room3</li>
     </ul>
   </section>
-  <button type="button">create room</button>
+  <RouterLink to="/create-room">Create Room</RouterLink>
   <button type="button">connect</button>
   <router-link to="/">to Auth</router-link>
 </template>
