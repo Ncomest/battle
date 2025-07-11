@@ -1,6 +1,6 @@
 <script setup>
-import ButtonBlue from "@/components/shared/buttons/button-blue/ButtonBlue.vue";
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
 // Объект для хранения данных формы
 const formData = ref({
@@ -55,8 +55,8 @@ const sendToBackend = async (data) => {
   <div class="auth-page">
     <form @submit.prevent="handleSubmit" class="auth-page__form">
       <div class="input-group">
-        <input type="text" class="form-input" placeholder=" " />
-        <label class="input-label">Ваш текст</label>
+        <label class="input-label">Login</label>
+        <input type="text" class="form-input" placeholder="Login" />
       </div>
       <div class="auth-page__input-container">
         <label for="password">Password</label>
@@ -68,9 +68,10 @@ const sendToBackend = async (data) => {
         />
       </div>
       <div>
-        <ButtonBlue text="Отправить" type="submit" />
+        <button type="submit">click</button>
       </div>
     </form>
+    <RouterLink :to="{ name: 'Lobby' }">в лобби</RouterLink>
   </div>
 </template>
 
