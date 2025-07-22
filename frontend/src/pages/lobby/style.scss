@@ -1,0 +1,54 @@
+.lobby {
+  padding: 20px;
+
+  &__table {
+    border-collapse: collapse;
+    border: 2px solid rgb(44, 44, 44);
+    margin-bottom: 20px;
+
+    &__head {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 10;
+
+      & tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+    }
+
+    &__body {
+      display: block;
+      height: 300px;
+      overflow-y: auto;
+
+      & tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    column-gap: 20px;
+  }
+  
+  &__button {
+    padding: 10px 20px;
+    text-wrap: nowrap;
+
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+th,
+td {
+  border: 1px solid #adabab;
+  padding: 10px 20px;
+}

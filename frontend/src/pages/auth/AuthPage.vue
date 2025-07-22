@@ -54,21 +54,26 @@ const sendToBackend = async (data) => {
 <template>
   <div class="auth-page">
     <form @submit.prevent="handleSubmit" class="auth-page__form">
-      <div class="input-group">
-        <label class="input-label">Login</label>
-        <input type="text" class="form-input" placeholder="Login" />
-      </div>
-      <div class="auth-page__input-container">
-        <label for="password">Password</label>
+      <div class="auth-page__form__input-group">
+        <label class="input-label">Логин:</label>
         <input
+          type="text"
+          class="auth-page__form__input"
+          placeholder="Введите логин"
+        />
+      </div>
+      <div class="auth-page__form__input-group">
+        <label for="password">Пароль:</label>
+        <input
+          class="auth-page__form__input"
           v-model="formData.password"
           id="password"
           type="password"
-          placeholder="Password"
+          placeholder="Введите пароль"
         />
       </div>
       <div>
-        <button type="submit">click</button>
+        <button class="auth-page__form__button" type="submit">Войти</button>
       </div>
     </form>
     <RouterLink :to="{ name: 'Lobby' }">в лобби</RouterLink>
