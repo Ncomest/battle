@@ -1,11 +1,11 @@
-<script setup lang="ts">
-
+<script setup>
+defineProps({
+  text: { type: String, required: true },
+});
 </script>
 
 <template>
-  $END$
+  <button class="button-in-game" type="button">{{ text }}</button>
 </template>
 
-<style scoped>
-
-</style>
+<style src="./style.scss"></style>

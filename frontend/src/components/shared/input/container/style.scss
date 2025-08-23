@@ -1,0 +1,16 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  & label {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  & input {
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}

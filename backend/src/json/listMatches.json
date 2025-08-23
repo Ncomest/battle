@@ -1,0 +1,26 @@
+[
+  {
+    "waitingRoomName": "Cherezard",
+    "hostName": "Charls",
+    "waitingRoomID": 14,
+    "currentPlayers": 1,
+    "maxPlayers": 2,
+    "waitingRoomPassword": true
+  },
+  {
+    "waitingRoomName": "Laxat",
+    "hostName": "Koiler",
+    "waitingRoomID": 12,
+    "currentPlayers": 1,
+    "maxPlayers": 2,
+    "waitingRoomPassword": true
+  },
+  {
+    "waitingRoomName": "Koasdk",
+    "hostName": "Jous",
+    "waitingRoomID": 6,
+    "currentPlayers": 2,
+    "maxPlayers": 2,
+    "waitingRoomPassword": false
+  }
+]

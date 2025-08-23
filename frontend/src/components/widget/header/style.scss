@@ -1,0 +1,45 @@
+.app-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #7c7c7c;
+  color: white;
+  padding: 10px 30px;
+
+  &__wrapper {
+    display: flex;
+    column-gap: 30px;
+    align-items: baseline;
+  }
+
+  &__login {
+    font-size: 20px;
+  }
+
+  &__level-container {
+    display: flex;
+    align-items: baseline;
+    column-gap: 5px;
+
+  }
+
+  &__level {
+    font-size: 20px;
+  }
+
+  &__xp-container {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__profile-wrapper {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__sign-in-register {
+    display: flex;
+    column-gap: 20px;
+  }
+}

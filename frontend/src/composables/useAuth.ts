@@ -6,7 +6,7 @@ export function useAuth() {
   const isAuthenticated = ref(!!token.value)
   const router = useRouter()
 
-  const login = async (login, password) => {
+  const login = async (login: string, password: string) => {
     try {
       const response = await fetch('http://localhost:3000/api/auth/login', {
         method: 'POST',

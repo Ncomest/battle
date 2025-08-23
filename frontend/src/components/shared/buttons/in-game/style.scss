@@ -1,0 +1,19 @@
+.button-in-game {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4581ff;
+  color: #e3e3e3;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  outline: none;
+  border: 1px solid #0f5dff;
+
+  &:hover {
+    background-color: #598ffb;
+  }
+
+  &:active {
+    background-color: #3173ff;
+  }
+}

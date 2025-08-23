@@ -1,12 +1,11 @@
 <script setup>
 defineProps({
   text: { type: String, required: true },
-  to: { type: String, required: true },
 });
 </script>
 
 <template>
-  <router-link class="button-system" :to="to">{{ text }}</router-link>
+  <button class="button-system" type="button">{{ text }}</button>
 </template>
 
 <style src="./style.scss"></style>

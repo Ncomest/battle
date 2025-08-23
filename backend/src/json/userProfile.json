@@ -1,0 +1,29 @@
+[
+  {
+    "login": "eledan",
+    "password": "123",
+    "id": 1,
+    "level": 4,
+    "currentXp": 55,
+    "maxXp": 100,
+    "online": false
+  },
+  {
+    "login": "ncom",
+    "password": "1234",
+    "id": 2,
+    "level": 5,
+    "currentXp": 70,
+    "maxXp": 100,
+    "online": false
+  },
+  {
+    "login": "farmlegends",
+    "password": "12345",
+    "id": 3,
+    "level": 5,
+    "currentXp": 23,
+    "maxXp": 100,
+    "online": false
+  }
+]

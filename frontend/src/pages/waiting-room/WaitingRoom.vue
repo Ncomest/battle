@@ -1,8 +1,9 @@
 <script setup>
-import ButtonInGame from '@components/shared/buttons/in-game/ButtonInGame.vue'
-import InputContainer from '@components/shared/input/container/InputContainer.vue'
-import { computed, ref } from 'vue'
-import InputInGame from '@components/shared/input/in-game/InputInGame.vue'
+import ButtonInGame from '@components/shared/buttons/in-game/ButtonInGame.vue';
+import InputContainer from '@components/shared/input/container/InputContainer.vue';
+import { computed, ref } from 'vue';
+import InputInGame from '@components/shared/input/in-game/InputInGame.vue';
+import { truncate } from 'fs/promises';
 
 // Данные комнаты получаем с бэка
 const mokData = {
@@ -15,26 +16,26 @@ const mokData = {
       nickname: null,
       ready: false,
     },
-    // {
-    //   id: 2,
-    //   login: 'Mikel',
-    //   level: 4,
-    //   role: 'connecter',
-    //   nickname: 'Volkolak',
-    //   ready: true,
-    //   isEmpty: false,
-    // },
     {
-      id: null,
-      login: null,
-      level: null,
+      id: 2,
+      login: 'Mikel',
+      level: 4,
       role: 'connecter',
-      nickname: null,
-      ready: null,
-      isEmpty: true,
+      nickname: 'Volkolak',
+      ready: true,
+      isEmpty: false,
     },
+    // {
+    //   id: null,
+    //   login: null,
+    //   level: null,
+    //   role: 'connecter',
+    //   nickname: null,
+    //   ready: null,
+    //   isEmpty: true,
+    // },
   ],
-}
+};
 
 // Данные авторизованного пользователя
 const mokDataPlayer = {
@@ -42,7 +43,7 @@ const mokDataPlayer = {
   login: 'Satina',
   nickname: null,
   level: 12,
-}
+};
 
 // const mokDataPlayer = {
 //   id: 1,
@@ -54,44 +55,44 @@ const mokDataPlayer = {
 const isCanStart = computed(() => {
   const isHost = mokData.players.some(
     (player) => player.role === 'host' && player.login === mokDataPlayer.login
-  )
+  );
   const isAllReady = mokData.players.every(
     (player) => player.ready && player.nickname !== null
-  )
-  const playerQuantity = mokData.players.length === 2
+  );
+  const playerQuantity = mokData.players.length === 2;
 
-  return isHost && isAllReady && playerQuantity
-})
+  return isHost && isAllReady && playerQuantity;
+});
 
 // Определяем текущего игрока
 const myChooseNickname = computed(() =>
   mokData.players.find((player) => player.login === mokDataPlayer.login)
-)
+);
 
 // Проверяем есть ли 2ой игрок
 const isTwoPlayers = computed(() =>
   mokData.players.some((p) => p.isEmpty === true)
-)
+);
 
 // Определяем второго игрока
 const enemyChooseNickName = computed(() =>
   mokData.players.find((player) => player.login !== mokDataPlayer.login)
-)
+);
 
 // Готовность участников
 const playersReady = computed(() => {
-  const allReady = mokData.players.every((p) => p.ready === true)
-  const playerQuantity = mokData.players.length === 2
+  const allReady = mokData.players.every((p) => p.ready === true);
+  const playerQuantity = mokData.players.length === 2;
 
-  return allReady && playerQuantity
-})
+  return allReady && playerQuantity;
+});
 
 // Выбираем Ник
-const selectNickname = ref('')
+const selectNickname = ref('');
 
 // Кинуть инвайт
-const invitePlayer = ref('')
-console.log('invitePlayer', invitePlayer.value)
+const invitePlayer = ref('');
+console.log('invitePlayer', invitePlayer.value);
 </script>
 
 <template>

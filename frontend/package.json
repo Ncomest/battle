@@ -9,14 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^17.2.1",
     "oh-vue-icons": "^1.0.0-rc3",
+    "socket.io-client": "^4.8.1",
     "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "websocket": "^1.0.35"
   },
   "devDependencies": {
     "@types/node": "^24.0.12",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/tsconfig": "^0.7.0",
+    "prettier": "^3.6.2",
     "sass-embedded": "^1.89.2",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",

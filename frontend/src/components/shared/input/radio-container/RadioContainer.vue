@@ -1,11 +1,16 @@
-<script setup lang="ts">
-
+<script setup>
+  defineProps({
+    title: {type: String, required: true},
+    id: {type: String, required: true},
+    name: {type: String, required: true},
+  })
 </script>
 
 <template>
-  $END$
+  <div class="radio-container">
+    <label :for="id">{{ title }}</label>
+    <input type="radio" :name :id />
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style src="./style.scss"></style>

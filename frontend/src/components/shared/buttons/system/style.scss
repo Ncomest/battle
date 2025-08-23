@@ -1,5 +1,5 @@
 .button-system {
-  //padding: 10px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   background-color: #ffffff;
@@ -9,7 +9,6 @@
   outline: none;
   border: 1px solid #222222;
   transition: background-color .3s ease;
-  text-decoration: none;
 
   &:hover {
     background-color: #222222;

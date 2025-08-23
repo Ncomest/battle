@@ -4,14 +4,15 @@
   align-items: center;
   flex-direction: column;
   margin: auto;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-desktop));
 
   &__form {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 40px 80px;
     border: 1px solid black;
     row-gap: 20px;
+    border-radius: 20px;
     
     &__input-group {
       display: flex;
@@ -25,7 +26,6 @@
 
     &__button {
       width: 100%;
-      padding: 10px 0;
     }
   }
 }
